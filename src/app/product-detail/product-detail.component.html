@@ -1,0 +1,14 @@
+<div class="product-details">
+    <div *ngIf="isProductLoad">
+        <div class="images">
+            <div *ngFor="img of productDetails.images; let i =index">
+                <img class="product-img" src="{{productDetails.images[i]}}" alt="img">
+            </div>
+        </div>
+        <p class="product-name">{{productDetails.Name}}</p>
+        <p>{{productDetails.Description}}</p>
+        <p class="product-price">Price : {{productDetails.Price}}</p>
+        <button class="btn" (click)='addToCart(productDetails)'>Add to Cart</button>
+        <button class="cart-btn" (click)='goToCart()'>Go to Cart</button>
+    </div>
+</div>

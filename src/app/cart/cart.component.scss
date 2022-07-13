@@ -1,0 +1,33 @@
+.product-details{
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    justify-content: space-evenly;
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    .add,.remove{
+        cursor: pointer;
+        padding: 5px;
+        font-size: 16px;
+        background-color: lightgrey;
+        font-weight: 800;
+    }
+    .qty{
+        padding:5px 14px;
+        font-size: 16px;
+        background-color: #ebe7e7;
+    }
+    .trash-icon{
+        width: 20px;
+        cursor: pointer;
+    }
+}
+.total{
+    margin: 4rem 17rem;
+    label{
+        margin-right: 15px;
+    }
+}

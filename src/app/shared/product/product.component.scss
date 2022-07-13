@@ -1,0 +1,16 @@
+.product{
+    margin-left: 50px;
+    img{
+        width: 250px;
+        height: 250px;
+    }
+    .product-name{
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .product-name:hover{
+        color: #4949f5;
+        text-decoration: underline;
+    }
+}

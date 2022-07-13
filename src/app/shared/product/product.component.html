@@ -1,0 +1,7 @@
+<div class="product">
+    <img class="product-img" src="{{product.images[0]}}" alt="img">
+    <p><a class="product-name" [routerLink]="['/products',product.slug]">{{product.Name}}</a></p>
+    <p>{{product.Description}}</p>
+    <p class="product-price">Price : {{product.Price}}</p>
+    <button class="btn" (click)='addToCart(product)'>Add to Cart</button>
+</div>

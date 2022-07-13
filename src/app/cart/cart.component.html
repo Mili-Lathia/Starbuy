@@ -1,0 +1,21 @@
+<div *ngIf="isitemsLoad">
+    <div class="product-details" *ngFor="let item of cartItems;let i = index">
+        <img class="product-img"  src="{{item.images[0]}}" alt="img">
+        <p class="product-name">{{item.Name}}</p>
+        <p class="product-price">Price : {{item.Price * item.qty}}</p>
+        <div>
+            <small class="add" (click)="addToCart(item)">+</small>
+            <small class="qty">{{item.qty}}</small>
+            <small class="remove" (click)="removeQty(item)">-</small>
+        </div>
+        <img src="assets/svg/trash-2-outline.svg" class="trash-icon" (click)="removeItem(i)">
+    </div>
+    <div class="total" *ngIf="cartItems[0]">
+        <h2>SubTotal : {{subTotal}}</h2>
+        <label>Choose a Shipping Method:</label>
+        <select  (change)="selectedMethod($event.target.value)">
+          <option value="{{method.Price}}" *ngFor="let method of shippngMethods">{{method.Name}}</option>
+        </select>
+        <h2>Total (shipping charge + SubTotal) : {{total}}</h2>
+    </div>
+</div>
